@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
 
+import { Box, Button, Container,Stack } from '@mui/material';
+import './App.css';
+import Navbar from './Navbar/Navbar';
+import Herosection from './Hero/Herosection';
+import HeroTypography from './Typography/HeroTypography';
+import HeroImage from './HeroImage/HeroImage';
+import Accordiann from './AccodianExampple/Accordiann';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Box>
+      <Container>
+        <Navbar></Navbar>
+      {/* <Herosection></Herosection> */}
+      <Stack direction={"row"} spacing={2} justifyContent={"space-between"}>
+        <Box sx={{flex:'1'}}>
+          <HeroTypography/>
+          </Box>
+
+          <Box>
+            <HeroImage/>
+          </Box>
+        
+      </Stack>
+      <Accordiann></Accordiann>
+      </Container>
+      
+    </Box>
   );
 }
 
